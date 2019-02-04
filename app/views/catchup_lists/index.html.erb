@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Catchup Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @catchup_lists.each do |catchup_list| %>
+      <tr>
+        <td><%= catchup_list.title %></td>
+        <td><%= catchup_list.description %></td>
+        <td><%= link_to 'Show', catchup_list %></td>
+        <td><%= link_to 'Edit', edit_catchup_list_path(catchup_list) %></td>
+        <td><%= link_to 'Destroy', catchup_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Catchup List', new_catchup_list_path %>

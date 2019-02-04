@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @catchup_list.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @catchup_list.description %>
+</p>
+
+<%= link_to 'Edit', edit_catchup_list_path(@catchup_list) %> |
+<%= link_to 'Back', catchup_lists_path %>
